@@ -21,7 +21,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_countries',
 
-    'core'
+    'core',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -32,9 +33,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
+
 ]
 
 ROOT_URLCONF = 'djecommerce.urls'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 TEMPLATES = [
     {
@@ -80,3 +86,4 @@ LOGIN_REDIRECT_URL = '/'
 # CRISPY FORMS
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
